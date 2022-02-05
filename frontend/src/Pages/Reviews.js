@@ -17,9 +17,10 @@ const InnerCon = styled.div`
     justify-content: center;
     align-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
     background-color: red;
+    padding: 0% 5% 0% 5%;
 `
 
 const ReviewDivider = styled.div`
@@ -27,28 +28,34 @@ const ReviewDivider = styled.div`
     flex-direction: column;
     align-content: center;
     align-items: center;
-    height: 92%;
-    width: 30%;
-    padding: 4% 1% 4% 1%;
+    height: 90%;
+    width: 31%;
+    padding: 4% 1% 0% 1%;
 `
 
 const ReviewImage = styled.img`
     object-fit: contain;
-    width: 100%;
-    height: 100%;
-    border-radius: 5%;
+    width: 300px;
+    height: 300px;
+    padding: 0% 2% 0% 2%;
 `
 
 const ReviewContent = styled.div`
-
+    height: 20%;
 `
 
 const ReviewBody = styled.p`
-
+    text-align: center;
 `
 
-const ReviewBold = styled.p`
+const ReviewBodyBold = styled.p`
+    font-weight: bold;
+`
 
+const HR = styled.hr`
+    border: 0;
+    border-left: .5px solid beige;
+    height: 95%;
 `
 
 var images = []
@@ -72,19 +79,39 @@ function Reviews() {
         <OuterCon>
             <InnerCon>
                 <ReviewDivider>
-                    <ScrollAnimation animateIn="animate__animated animate__fadeInDown">
+                    <ScrollAnimation animateIn="animate__animated animate__fadeInDown"> 
                         <ReviewImage src = {images[0]}/>
                     </ScrollAnimation>
+                    <ReviewContent>
+                        <ReviewBody>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna <b>aliqua</b>.
+                        </ReviewBody>
+                    </ReviewContent>
                 </ReviewDivider>
+                <HR/>
                 <ReviewDivider>
-                    <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
+                    <ReviewContent>
+                        <ReviewBody>
+                            Lorem ipsum dolor sit <b>amet</b>, consectetur adipiscing elit, <b>sed do eiusmod tempor</b> incididunt 
+                            ut labore et dolore magna aliqua.
+                        </ReviewBody>
+                    </ReviewContent>
+                    <ScrollAnimation animateIn="animate__animated animate__fadeInUp"> 
                         <ReviewImage src = {images[1]}/>
                     </ScrollAnimation>
                 </ReviewDivider>
+                <HR/>
                 <ReviewDivider>
-                    <ScrollAnimation animateIn="animate__animated animate__fadeInDown">
+                    <ScrollAnimation animateIn="animate__animated animate__fadeInDown"> 
                         <ReviewImage src = {images[2]}/>
                     </ScrollAnimation>
+                    <ReviewContent>
+                        <ReviewBody>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                            ut <b>labore et dolore magna aliqua</b>.
+                        </ReviewBody>
+                    </ReviewContent>
                 </ReviewDivider>
             </InnerCon>
         </OuterCon>
