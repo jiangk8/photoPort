@@ -17,10 +17,9 @@ const InnerCon = styled.div`
     justify-content: center;
     align-content: center;
     align-items: center;
-    width: 90%;
+    width: 92%;
     height: 100%;
-    background-color: red;
-    padding: 0% 5% 0% 5%;
+    padding: 0% 4% 0% 4%;
 `
 
 const ReviewDivider = styled.div`
@@ -29,8 +28,9 @@ const ReviewDivider = styled.div`
     align-content: center;
     align-items: center;
     height: 90%;
-    width: 31%;
+    width: 30%;
     padding: 4% 1% 0% 1%;
+    margin: 0% 1% 0 1%;
 `
 
 const ReviewImage = styled.img`
