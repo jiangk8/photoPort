@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faYoutube, faFacebook, faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons";
 
 const OuterCon = styled.div`
     display: flex;
@@ -53,13 +54,34 @@ const SubmitButton = styled.button`
         color: white;
     }
 `
+const SocialMediaHeader = styled.h2`
+    text-align: center;
+    color: beige;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    background-color: pink;
+`
+
 const SocialMediaBar = styled.div`
     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     flex-direction: row;
-    width: 90%;
-    height: 20%;
+    width: 80%;
+    height: 3%;
+    padding: 3% 10% 5% 10%;
     background-color: pink;
-    margin: 5% 5% 1% 5%;
+`
+
+const SocialMediaRef = styled.a`
+    margin: 5%;
+    color: beige;
+    transition: transform 250ms;
+    display: inline-block;
+    &:hover{
+        transform: translateY(-2px);
+    }
 `
 
 
@@ -90,7 +112,22 @@ function Contact() {
                 <SubmitButton>
                     Submit
                 </SubmitButton>   
+                <SocialMediaHeader>
+                    - Follow Me @ -
+                </SocialMediaHeader>
                 <SocialMediaBar>
+                    <SocialMediaRef href='https://www.youtube.com'>
+                        <FontAwesomeIcon icon = {faYoutube} size="2x"/>
+                    </SocialMediaRef>
+                    <SocialMediaRef href='https://www.facebook.com'>
+                        <FontAwesomeIcon icon = {faFacebook} size="2x"/>
+                    </SocialMediaRef>
+                    <SocialMediaRef href='https://www.twitter.com'> 
+                        <FontAwesomeIcon icon = {faTwitter} size="2x"/>
+                    </SocialMediaRef>
+                    <SocialMediaRef href='https://www.instagram.com'>
+                        <FontAwesomeIcon icon = {faInstagram} size="2x"/>
+                    </SocialMediaRef>
                 </SocialMediaBar>    
             </InnerCon>
         </OuterCon>
