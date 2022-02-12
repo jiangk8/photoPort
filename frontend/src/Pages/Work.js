@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
-import { getImages, getTagImages} from '../api';
+import { getImages} from '../api';
 
 const OuterCon = styled.div`
     display: flex;

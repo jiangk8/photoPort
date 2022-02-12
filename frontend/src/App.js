@@ -7,6 +7,7 @@ import Contact from './Pages/Contact'
 import Reviews from './Pages/Reviews';
 import Work from './Pages/Work'
 import "animate.css/animate.min.css";
+import * as Scroll from 'react-scroll';
 
 const OutsideContainer = styled.div`
 `
@@ -15,12 +16,27 @@ function App() {
   return (
   <>
    <ToolBar></ToolBar>
+
    <OutsideContainer>
-     <Image></Image>
-     <About></About>
-     <Work></Work>
-     <Reviews></Reviews>
-     <Contact></Contact>
+    <Scroll.Element name = "Image">
+      <Image/>
+    </Scroll.Element>
+
+    <Scroll.Element name = "About">
+      <About/>
+    </Scroll.Element>
+
+    <Scroll.Element name = "Work">
+      <Work/>
+    </Scroll.Element>
+    
+    <Scroll.Element name = "Reviews">
+      <Reviews/>
+    </Scroll.Element>
+    
+    <Scroll.Element name = "Contact">
+      <Contact/>
+    </Scroll.Element>
    </OutsideContainer>
   </>
   );
