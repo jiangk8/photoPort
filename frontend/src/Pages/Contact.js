@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import "animate.css/animate.min.css";
-import emailjs from '@emailjs/browser';
+import { handleSubmit} from '../api';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faYoutube, faFacebook, faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons";
 
@@ -15,15 +15,33 @@ const OuterCon = styled.div`
 const InnerCon = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     background-color: red;
 `
 const FirstRow = styled.h1`
+    height: 20%;
+    background-color: green;
     padding: 0% 2% 0% 2%;
+    margin: 1% 0% 1% 0%;
+`
+
+const Name = styled.input`
+    font-family: inherit;
+    width: 90%;
+    margin: 0% 5% 1% 5%;
 `
 
 const Email = styled.input`
+    font-family: inherit;
+    width: 90%;
+    margin: 0% 5% 1% 5%;
+`
+
+const Phone = styled.input`
     font-family: inherit;
     width: 90%;
     margin: 0% 5% 0% 5%;
@@ -31,14 +49,14 @@ const Email = styled.input`
 
 const Message = styled.textarea`
     font-family: inherit;
-    height: 30%;
+    height: 40%;
     width: 90%;
-    margin: 1% 5% 1% 5%;
+    margin: 0% 5% 1% 5%;
 `
 
 const Label = styled.label`
 `
-const SubmitButton = styled.button`
+const SubmitButton = styled.input`
     background-color: #e7e7e7;
     color: black;
     padding: 10px 15px;
@@ -57,10 +75,11 @@ const SubmitButton = styled.button`
 const SocialMediaHeader = styled.h2`
     text-align: center;
     color: beige;
-    margin-top: 3%;
-    margin-bottom: 0%;
-    background-color: pink;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
 `
+//background-color: pink;
 
 const SocialMediaBar = styled.div`
     display: flex;
@@ -69,10 +88,11 @@ const SocialMediaBar = styled.div`
     align-items: center;
     flex-direction: row;
     width: 80%;
-    height: 3%;
-    padding: 3% 10% 5% 10%;
-    background-color: pink;
+    height: 50%;
+    padding: 1% 10% 0% 10%;
+    
 `
+//background-color: pink;
 
 const SocialMediaRef = styled.a`
     margin: 5%;
@@ -84,11 +104,44 @@ const SocialMediaRef = styled.a`
     }
 `
 
+const SocialMediaHalf = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20%;
+    width: 100%;
+    background-color: pink;
+`
+
+const MessageHalf = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 73%;
+    width: 100%;
+    padding: 3% 0% 3% 0%;
+    background-color: blue;
+`
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    height: 78%;
+    width: 100%;
+`
+
 
 function Contact() {
 
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [name, setName] = useState("");
+    const form = useRef();
+
+    const sendEmail = (event) => {
+        event.preventDefault()
+        console.log(form)
+        handleSubmit(form.current)
+    }
 
     return(
         <OuterCon>
@@ -96,39 +149,59 @@ function Contact() {
                 <FirstRow>
                     Get in contact! Send a message below and enter a return email :)
                 </FirstRow>
-                <Message
-                    type = "text"
-                    value = {message}
-                    maxLength = "600"
-                    placeholder = 'Say Hi, Reach Out! '
-                    onChange={(e) => setMessage(e.target.value)}
-                />
-                <Email
-                    type = "text"
-                    placeholder = 'Email'
-                    value = {email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />     
-                <SubmitButton>
-                    Submit
-                </SubmitButton>   
-                <SocialMediaHeader>
-                    - Follow Me @ -
-                </SocialMediaHeader>
-                <SocialMediaBar>
-                    <SocialMediaRef href='https://www.youtube.com'>
-                        <FontAwesomeIcon icon = {faYoutube} size="2x"/>
-                    </SocialMediaRef>
-                    <SocialMediaRef href='https://www.facebook.com'>
-                        <FontAwesomeIcon icon = {faFacebook} size="2x"/>
-                    </SocialMediaRef>
-                    <SocialMediaRef href='https://www.twitter.com'> 
-                        <FontAwesomeIcon icon = {faTwitter} size="2x"/>
-                    </SocialMediaRef>
-                    <SocialMediaRef href='https://www.instagram.com'>
-                        <FontAwesomeIcon icon = {faInstagram} size="2x"/>
-                    </SocialMediaRef>
-                </SocialMediaBar>    
+                <Form ref={form} onSubmit={sendEmail}>
+                    <MessageHalf>
+                        <Message
+                            type = "text"
+                            value = {message}
+                            maxLength = "600"
+                            name = "message"
+                            placeholder = 'Say Hi, Reach Out! '
+                            onChange={(e) => setMessage(e.target.value)}
+                        />
+                        <Name
+                            type = "text"
+                            placeholder = 'Full Name'
+                            value = {name}
+                            name = "from_name"
+                            onChange={(e) => setName(e.target.value)}
+                        />  
+                        <Email
+                            type = "text"
+                            placeholder = 'Email'
+                            value = {email}
+                            name = "email"
+                            onChange={(e) => setEmail(e.target.value)}
+                        />  
+                        <Phone
+                            type = "text"
+                            placeholder = 'Phone Number'
+                            value = {phone}
+                            name = "phone"
+                            onChange={(e) => setPhone(e.target.value)}
+                        />  
+                        <SubmitButton type = "submit" value="Send"/>
+                    </MessageHalf>
+                    <SocialMediaHalf>
+                        <SocialMediaHeader>
+                            - Follow Me @ -
+                        </SocialMediaHeader>
+                        <SocialMediaBar>
+                            <SocialMediaRef href='https://www.youtube.com'>
+                                <FontAwesomeIcon icon = {faYoutube} size="2x"/>
+                            </SocialMediaRef>
+                            <SocialMediaRef href='https://www.facebook.com'>
+                                <FontAwesomeIcon icon = {faFacebook} size="2x"/>
+                            </SocialMediaRef>
+                            <SocialMediaRef href='https://www.twitter.com'> 
+                                <FontAwesomeIcon icon = {faTwitter} size="2x"/>
+                            </SocialMediaRef>
+                            <SocialMediaRef href='https://www.instagram.com'>
+                                <FontAwesomeIcon icon = {faInstagram} size="2x"/>
+                            </SocialMediaRef>
+                        </SocialMediaBar>    
+                    </SocialMediaHalf>   
+                </Form>
             </InnerCon>
         </OuterCon>
     );
