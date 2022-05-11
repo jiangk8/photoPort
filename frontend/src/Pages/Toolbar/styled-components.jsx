@@ -2,27 +2,27 @@ import styled from 'styled-components'
 
 export const Background = styled.div`
     display: flex;
-    position: fixed;
     flex-direction: row;
     background-color: white;
-    height: 40px;
-    padding: 15px;
-    width: 100%;
     align-items: center;
-    padding-left: 6%;
-    z-index: 5;
+    justify-content: flex-start;
+    height: 100px;
+    padding-bottom: 2%;
 `
 
 export const Title = styled.button`
-    padding: 0px 20px;
+    margin: 2%;
     border: none;
     background-color: white;
     text-transform: uppercase;
+    font-size: 0.56rem;
+    letter-spacing: 0.2em;
     cursor: pointer;
 `
 
 export const Logo = styled.h2`
-    margin-right: 100px;
+    margin: 0% 5% 0% 11%;
+    font-family: "Lucida Handwriting", Cursive;
 `
 
 export const NavButton = styled.button`

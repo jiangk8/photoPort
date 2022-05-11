@@ -6,7 +6,7 @@ export const OuterCon = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 90vw;
+  width: 100%;
   background-color: green;
 `;
 export const PhotoComponent = styled.div`
