@@ -13,7 +13,7 @@ function Image() {
       i.push({
         image: require("../../Images/MainScroll/" + item.replace("./", ""))
           .default,
-        caption: "photo",
+        
       })
     );
     return i;
@@ -34,6 +34,7 @@ function Image() {
         automatic={true}
         time={3000}
         slideImageFit="cover"
+        showNavBtn={false}
       />
     </PhotoReelHolder>
   );
