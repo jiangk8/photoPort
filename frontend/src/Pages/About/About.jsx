@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {OuterCon, InnerCon, FirstRow, SecondRow, AboutBody, AboutMeDiv, AboutMeImage, DividerBar, FollowMeRow} from "./styled-components";
+import {OuterCon, InnerCon, FirstRow, SecondRow, AboutBody, AboutMeDiv, AboutMeImage} from "./styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import "../../../node_modules/animate.css/animate.min.css";
 
@@ -9,15 +9,11 @@ function About() {
   return (
     <OuterCon>
       <AboutMeDiv>
-        <ScrollAnimation animateIn="nanimate__animated animate__fadeIn">
           <AboutMeImage src={require("../../Images/Selfy.jpg").default} />
-        </ScrollAnimation>
       </AboutMeDiv>
       <InnerCon>
         <FirstRow>
-          <ScrollAnimation animateIn="animate__animated animate__fadeInDown">
             <h1>Arlette Nguyen</h1>
-          </ScrollAnimation>
         </FirstRow>
         <SecondRow>
           <AboutBody>
@@ -35,12 +31,6 @@ function About() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </AboutBody>
-          {/* <ScrollAnimation animateIn="animate__animated animate__zoomIn" delay = "200">
-                        <DividerBar/>
-                    </ScrollAnimation>
-                    <FollowMeRow>
-                        
-                    </FollowMeRow> */}
         </SecondRow>
       </InnerCon>
     </OuterCon>

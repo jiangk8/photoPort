@@ -1,9 +1,9 @@
 import emailjs from "@emailjs/browser";
 
-const API_URL = process.env.REACT_APP_API_URL;
-const EMAIL_USERID = process.env.REACT_APP_USER_ID;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+const API_URL = "http://localhost:7000";
+const EMAIL_USERID = "user_IJmALnqSMnD2mAqBXzJxq";
+const TEMPLATE_ID = "template_hih80iq";
+const SERVICE_ID = "service_wrld7cn";
 
 export const getImages = async (tag, max_results, nextCursor) => {
   const params = new URLSearchParams();
