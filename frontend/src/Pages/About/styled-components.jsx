@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const OuterCon = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
 `;
 export const InnerCon = styled.div`
   display: flex;

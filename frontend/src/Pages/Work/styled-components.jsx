@@ -5,23 +5,15 @@ export const OuterCon = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  background-color: green;
-  margin: 50px;
+  margin-bottom: 50px;
 `;
 export const PhotoComponent = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: pink;
-  height: 100%;
-  margin: 50px;
 `;
 export const PhotoMenuBar = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: yellow;
-  height: 7%;
-  margin: 50px;
 `;
 export const MenuBarButton = styled.button`
   background-color: #555555;
@@ -43,7 +35,6 @@ export const MenuBarButton = styled.button`
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
-  margin: 50px;
 `;
 
 export const Photos = styled.div`
@@ -52,7 +43,6 @@ export const Photos = styled.div`
   justify-content: center;
   align-items: center;
   height: 93%;
-  margin: 50px;
 `;
 
 export const PhotoReel = styled.div`
@@ -63,7 +53,6 @@ export const PhotoReel = styled.div`
   width: 86%;
   height: 98%;
   padding: 1% 7% 1% 7%;
-  margin: 50px;
 `;
 
 export const RightButton = styled.button`
@@ -71,14 +60,12 @@ export const RightButton = styled.button`
   width: 5%;
   margin-left: -5%;
   z-index: 4;
-  margin: 50px;
 `;
 export const LeftButton = styled.button`
   height: 5%;
   width: 5%;
   margin-right: -5%;
   z-index: 4;
-  margin: 50px; 
 `;
 
 export const ImageBox = styled.div`
@@ -86,7 +73,6 @@ export const ImageBox = styled.div`
   width: 25%;
   height: 50%;
   overflow: hidden;
-  margin: 50px;
 `;
 
 export const Picture = styled.img`
@@ -94,5 +80,4 @@ export const Picture = styled.img`
   height: 96%;
   width: 96%;
   padding: 2%;
-  margin: 50px;
 `;

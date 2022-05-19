@@ -54,21 +54,6 @@ function Work() {
     setNextCursor(responseJson.next_cursor);
   };
 
-  // const reloadPhotos = async () => {
-  // 	const responseJson = await getImages(imageTag, 8, null);
-  //     setPrevImages((currentPrev) =>
-  //         []
-  //     );
-  //     setNextCursorList((current)=>
-  //         []
-  //     );
-  //     //console.log(nextCursorList)
-  // 	setImages((currentImageList) => [
-  // 		...responseJson.resources,
-  // 	]);
-  // 	setNextCursor(responseJson.next_cursor);
-  // };
-
   return (
     <OuterCon>
       <PhotoComponent>
