@@ -10,9 +10,7 @@ var images = [];
 
 function Reviews() {
   function importAll(r) {
-    // let i = {};
-    // r.keys().map((item, index) => { i[item.replace('./', '')] = r(item); });
-    // return i;
+
     let i = [];
     r.keys().map((item) =>
       i.push(
@@ -30,9 +28,7 @@ function Reviews() {
     <OuterCon>
       <InnerCon>
         <ReviewDivider>
-          <ScrollAnimation animateIn="animate__animated animate__fadeInDown">
             <ReviewImage src={images[0]} />
-          </ScrollAnimation>
           <ReviewContent>
             <ReviewBody>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -49,15 +45,11 @@ function Reviews() {
               aliqua.
             </ReviewBody>
           </ReviewContent>
-          <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <ReviewImage src={images[1]} />
-          </ScrollAnimation>
         </ReviewDivider>
         <HR />
         <ReviewDivider>
-          <ScrollAnimation animateIn="animate__animated animate__fadeInDown">
             <ReviewImage src={images[2]} />
-          </ScrollAnimation>
           <ReviewContent>
             <ReviewBody>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

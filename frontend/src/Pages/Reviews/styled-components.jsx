@@ -3,9 +3,7 @@ import styled from 'styled-components'
 export const OuterCon = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 80vh;
-  background-color: pink;
 `;
 export const InnerCon = styled.div`
   display: flex;
@@ -50,6 +48,6 @@ export const ReviewBodyBold = styled.p`
 
 export const HR = styled.hr`
   border: 0;
-  border-left: 0.5px solid beige;
+  border-left: 0.5px solid black;
   height: 95%;
 `;

@@ -62,7 +62,7 @@ function Contact() {
               name="phone"
               onChange={(e) => setPhone(e.target.value)}
             />
-            <SubmitButton type="submit" value="Send" />
+            <SubmitButton type="submit" value="Let's Connect" />
           </MessageHalf>
           <SocialMediaHalf>
             <SocialMediaHeader>- Follow Me @ -</SocialMediaHeader>
