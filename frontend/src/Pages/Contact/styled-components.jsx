@@ -4,64 +4,46 @@ export const OuterCon = styled.div`
   display: flex;
   flex-direction: row;
   height: 72vh;
-`;
-export const InnerCon = styled.div`
+`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
   height: 100%;
-`;
-export const FirstRow = styled.h1`
-  height: 20%;
-  padding: 0% 2% 0% 2%;
-  margin: 1% 0% 1% 0%;
-`;
+  max-width: 800px;
+  margin: auto;
+`
+export const ContactTitle = styled.h1`
+  font-size: 36px;
+  text-align: center;
+`
 
-export const Name = styled.input`
+export const StyledInput = styled.input`
   font-family: inherit;
-  margin: 0% 5% 1% 5%;
-`;
-
-export const Email = styled.input`
-  font-family: inherit;
-  margin: 0% 5% 1% 5%;
-`;
-
-export const Phone = styled.input`
-  font-family: inherit;
-  margin: 0% 5% 0% 5%;
-`;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: unset;
+  height: 42px;
+  padding: 0px 10px;
+  border: 1px solid #e2e8f0;
+`
 
 export const Message = styled.textarea`
-  font-family: inherit;
-  height: 40%;
-  margin: 0% 5% 1% 5%;
-`;
+  height: 100px;
+  padding: 0px 10px;
+  border: 1px solid #e2e8f0;
+`
 
-export const Label = styled.label``;
-export const SubmitButton = styled.input`
-  color: black;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 13px;
-  width: 12%;
-  margin: 2% 44% 1% 44%;
-  border: none;
-  &:hover {
-    background-color: #555555;
-    color: white;
-  }
-`;
+export const Label = styled.label``
+export const SubmitButton = styled.button`
+  width: 120px;
+  height: 30px;
+  margin: 20px auto auto;
+`
 export const SocialMediaHeader = styled.h2`
   text-align: center;
   margin-top: 5px;
   margin-bottom: 0px;
-`;
-//background-color: pink;
+`
 
 export const SocialMediaBar = styled.div`
   display: flex;
@@ -71,8 +53,7 @@ export const SocialMediaBar = styled.div`
   flex-direction: row;
   height: 50%;
   padding: 1% 10% 0% 10%;
-`;
-//background-color: pink;
+`
 
 export const SocialMediaRef = styled.a`
   margin: 5%;
@@ -81,14 +62,14 @@ export const SocialMediaRef = styled.a`
   &:hover {
     transform: translateY(-2px);
   }
-`;
+`
 
 export const SocialMediaHalf = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 20%;
-`;
+`
 
 export const MessageHalf = styled.div`
   display: flex;
@@ -96,10 +77,10 @@ export const MessageHalf = styled.div`
   height: 73%;
   width: 100%;
   padding: 3% 0% 3% 0%;
-`;
+`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   height: 78%;
   width: 100%;
-`;
+`
