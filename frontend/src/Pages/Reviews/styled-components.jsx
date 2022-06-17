@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 
-export const OuterCon = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-`;
-export const InnerCon = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,7 +9,8 @@ export const InnerCon = styled.div`
   width: 92%;
   height: 100%;
   padding: 0% 4% 0% 4%;
-`;
+  height: 80vh;
+`
 
 export const ReviewDivider = styled.div`
   display: flex;
@@ -25,29 +21,29 @@ export const ReviewDivider = styled.div`
   width: 30%;
   padding: 4% 1% 0% 1%;
   margin: 0% 1% 0 1%;
-`;
+`
 
 export const ReviewImage = styled.img`
+  display: flex;
   object-fit: contain;
-  width: 300px;
-  height: 300px;
-  padding: 0% 2% 0% 2%;
-`;
+  max-width: 300px;
+  max-height: 300px;
+`
 
 export const ReviewContent = styled.div`
   height: 20%;
-`;
+`
 
 export const ReviewBody = styled.p`
   text-align: center;
-`;
+`
 
 export const ReviewBodyBold = styled.p`
   font-weight: bold;
-`;
+`
 
 export const HR = styled.hr`
   border: 0;
   border-left: 0.5px solid black;
   height: 95%;
-`;
+`

@@ -6,4 +6,4 @@ export const PhotoReelHolder = styled.div`
   width: 100%;
   height: 80vh;
   margin-bottom: 5%;
-`;
+`

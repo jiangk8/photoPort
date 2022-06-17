@@ -69,7 +69,7 @@ function Contact() {
             value={message}
             maxLength="600"
             name="message"
-            placeholder="Say Hi, Reach Out! "
+            placeholder="Say Hi, Reach Out!"
             onChange={(e) => setMessage(e.target.value)}
           />
           <SubmitButton type="submit">Submit</SubmitButton>

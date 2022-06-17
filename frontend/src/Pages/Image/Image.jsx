@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { PhotoReelHolder } from "./styled-components";
-import { Carousel } from "react-carousel-minimal";
+import React from 'react'
+import { PhotoReelHolder } from './styled-components'
+import { Carousel } from 'react-carousel-minimal'
 
+const Image = () => {
+  let images = []
 
-var images = [];
-
-
-function Image() {
-  function importAll(r) {
-    let i = [];
+  const importAll = (r) => {
+    let i = []
     r.keys().map((item) =>
       i.push({
-        image: require("../../Images/MainScroll/" + item.replace("./", ""))
+        image: require('../../Images/MainScroll/' + item.replace('./', ''))
           .default,
-        
-      })
-    );
-    return i;
+      }),
+    )
+    return i
   }
 
-
   images = importAll(
-    require.context("../../Images/MainScroll", false, /\.(png|jpe?g|svg)$/)
-  );
+    require.context('../../Images/MainScroll', false, /\.(png|jpe?g|svg)$/),
+  )
 
   return (
     <PhotoReelHolder>
@@ -37,7 +33,7 @@ function Image() {
         showNavBtn={false}
       />
     </PhotoReelHolder>
-  );
+  )
 }
 
-export default Image;
+export default Image

@@ -29,15 +29,18 @@ export const StyledInput = styled.input`
 
 export const Message = styled.textarea`
   height: 100px;
-  padding: 0px 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
   border: 1px solid #e2e8f0;
 `
 
-export const Label = styled.label``
 export const SubmitButton = styled.button`
   width: 120px;
   height: 30px;
   margin: 20px auto auto;
+  border-radius: 10px;
+  background-color: #3e4444;
+  color: white;
 `
 export const SocialMediaHeader = styled.h2`
   text-align: center;
