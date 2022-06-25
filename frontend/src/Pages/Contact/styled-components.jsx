@@ -35,12 +35,14 @@ export const Message = styled.textarea`
 `
 
 export const SubmitButton = styled.button`
-  width: 120px;
-  height: 30px;
+  width: 200px;
+  height: 40px;
   margin: 20px auto auto;
   border-radius: 10px;
   background-color: #3e4444;
   color: white;
+  font-size: 16px;
+  cursor: pointer;
 `
 export const SocialMediaHeader = styled.h2`
   text-align: center;

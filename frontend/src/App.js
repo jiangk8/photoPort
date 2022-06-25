@@ -38,12 +38,16 @@ const Divider = styled.div`
   }
 `
 
+const Container = styled.div`
+  margin: 50px;
+`
+
 function App() {
   return (
     <div>
       <ToolBar></ToolBar>
 
-      <div>
+      <Container>
         <Scroll.Element name="Image">
           <Image />
         </Scroll.Element>
@@ -65,7 +69,7 @@ function App() {
         <Scroll.Element name="Contact">
           <Contact />
         </Scroll.Element>
-      </div>
+      </Container>
     </div>
   )
 }

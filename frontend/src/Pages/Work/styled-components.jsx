@@ -30,6 +30,7 @@ export const MenuBarButton = styled.button`
   height: 100%;
   margin-right: 2px;
   border: none;
+  cursor: pointer;
   &:hover {
     background-color: #e7e7e7;
     color: black;
@@ -57,9 +58,11 @@ export const PhotoReel = styled.div`
 `
 
 export const RightButton = styled.button`
-  height: 5%;
-  width: 5%;
-  margin-left: -5%;
+  width: 100px
+  height: 100px;
+  border-radius: 200px;
+  cursor: pointer;
+  background-image: url(${(props) => props.url});
   z-index: 4;
 `
 export const LeftButton = styled.button`
@@ -69,16 +72,10 @@ export const LeftButton = styled.button`
   z-index: 4;
 `
 
-export const ImageBox = styled.div`
-  display: flex;
-  width: 25%;
-  height: 50%;
-  overflow: hidden;
-`
-
-export const Picture = styled.img`
-  object-fit: contain;
+export const Picture = styled.div`
   width: 300px;
   height: 300px;
+  background-image: url(${(props) => props.url});
+  background-size: cover;
   margin: 20px 20px;
 `

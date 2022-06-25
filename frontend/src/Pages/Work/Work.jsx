@@ -8,7 +8,6 @@ import {
   PhotoReel,
   RightButton,
   LeftButton,
-  ImageBox,
   Picture,
 } from './styled-components'
 import 'animate.css/animate.min.css'
@@ -87,9 +86,7 @@ function Work() {
           )}
           <PhotoReel>
             {images.map((i, k) => (
-              <ImageBox>
-                <Picture src={i.url} />
-              </ImageBox>
+              <Picture url={i.url} key={k} />
             ))}
           </PhotoReel>
           {nextCursor && (
