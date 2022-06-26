@@ -12,6 +12,7 @@ import {
 } from './styled-components'
 import 'animate.css/animate.min.css'
 import { getImages } from '../../api'
+import RightArrow from '../../Images/right_arrow.png'
 
 function Work() {
   const [images, setImages] = useState([])
@@ -80,9 +81,7 @@ function Work() {
         </PhotoMenuBar>
         <Photos>
           {prevImages.length > 0 && (
-            <LeftButton onClick={handleLoadBackButtonClick}>
-              Prev Page
-            </LeftButton>
+            <LeftButton onClick={handleLoadBackButtonClick} url={RightArrow} />
           )}
           <PhotoReel>
             {images.map((i, k) => (
@@ -90,9 +89,10 @@ function Work() {
             ))}
           </PhotoReel>
           {nextCursor && (
-            <RightButton onClick={handleLoadForwardButtonClick}>
-              Next Page
-            </RightButton>
+            <RightButton
+              onClick={handleLoadForwardButtonClick}
+              url={RightArrow}
+            />
           )}
         </Photos>
       </PhotoComponent>

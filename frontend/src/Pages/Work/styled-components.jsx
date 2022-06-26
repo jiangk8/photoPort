@@ -28,7 +28,7 @@ export const MenuBarButton = styled.button`
   border-top-right-radius: 15px;
   width: 12%;
   height: 100%;
-  margin-right: 2px;
+  margin-right: 10px;
   border: none;
   cursor: pointer;
   &:hover {
@@ -45,31 +45,41 @@ export const Photos = styled.div`
   justify-content: center;
   align-items: center;
   height: 93%;
+  margin-top: 20px;
 `
 
 export const PhotoReel = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
   width: 86%;
   height: 98%;
-  padding: 1% 7% 1% 7%;
 `
 
 export const RightButton = styled.button`
-  width: 100px
-  height: 100px;
+  width: 40px;
+  height: 40px;
   border-radius: 200px;
   cursor: pointer;
-  background-image: url(${(props) => props.url});
-  z-index: 4;
+  background: url(${(props) => props.url});
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px;
+  box-shadow: unset;
+  border: none;
 `
 export const LeftButton = styled.button`
-  height: 5%;
-  width: 5%;
-  margin-right: -5%;
-  z-index: 4;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url(${(props) => props.url});
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px;
+  box-shadow: unset;
+  border: none;
+  transform: rotate(180deg);
 `
 
 export const Picture = styled.div`
