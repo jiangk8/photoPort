@@ -56,9 +56,18 @@ margin-left: -40px;
 export const Line = styled.div`
 background-color: grey;
 width: 1px;
-height: 130px;
+height: 100px;
 `
 
 export const MenuItemDiv = styled.div`
 margin-left: 20px;
 `
+
+/*
+        <Route exact path='/About' element={< About />}></Route>
+        <Route exact path='/Contact' element={< Contact />}></Route>
+        <Route exact path='/Portfolio' element={< Portfolio/>}></Route>
+        <Route exact path='/Family' element={< Family />}></Route>
+        <Route exact path='/Engagement' element={< Engagement />}></Route>
+        <Route exact path='/Portrait' element={< Portrait />}></Route>
+        */

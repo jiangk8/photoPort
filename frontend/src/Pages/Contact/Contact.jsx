@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import "animate.css/animate.min.css";
-import { handleSubmit} from '../api';
+import { handleSubmit} from '../../api';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faYoutube, faFacebook, faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons";
 

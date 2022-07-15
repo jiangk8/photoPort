@@ -1,6 +1,8 @@
 import React from "react";
 import {StyledProSideBar, StyledMenu, StyledMenuItem, StyledSubMenu, StyledSidebarHeader, StyledSidebarContent, MenuDiv, Line, MenuItemDiv} from "./styled-components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import About from '../About/About';
+import Contact from "../Contact/Contact";
 
 
 
@@ -13,18 +15,18 @@ function ToolBar() {
         </StyledSidebarHeader>
         <StyledMenu>
           <StyledSubMenu title="PORTFOLIO" open="true">
+            <Link to='/Portfolio'/>
             <MenuDiv>
             <Line/>
             <MenuItemDiv>
-            <StyledMenuItem>FAMILY</StyledMenuItem>
-            <StyledMenuItem>FOOD</StyledMenuItem>
-            <StyledMenuItem>PORTRAIT</StyledMenuItem>
-            <StyledMenuItem>SCENERY</StyledMenuItem>
+            <StyledMenuItem>FAMILY <Link to='/Family'/></StyledMenuItem>
+            <StyledMenuItem>ENGAGEMENT <Link to='/Engagement'/></StyledMenuItem>
+            <StyledMenuItem>PORTRAIT <Link to='/Portrait'/></StyledMenuItem>
             </MenuItemDiv>
             </MenuDiv>
           </StyledSubMenu>
-          <StyledSubMenu title="ABOUT ME" open="true"></StyledSubMenu>
-          <StyledSubMenu title="CONTACT"open="true"></StyledSubMenu>
+          <StyledSubMenu title="ABOUT ME" open="true"> <Link to='/About'/></StyledSubMenu>
+          <StyledSubMenu title="CONTACT"open="true"> <Link to='/Contact'/></StyledSubMenu>
         </StyledMenu>
       </StyledProSideBar>
   );

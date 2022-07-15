@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import SideBar from "./Pages/SideBar/SideBar.jsx";
+import SideBar from "./Pages/SideBar/SideBar";
 import Image from "./Pages/Image";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Reviews from "./Pages/Reviews";
+import About from "./Pages/About/About.jsx";
+import Contact from "./Pages/Contact/Contact.jsx";
 import Work from "./Pages/Work";
 import "animate.css/animate.min.css";
 import * as Scroll from "react-scroll";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const OutsideContainer = styled.div``;
 
 function App() {
   return (
     <>
-      <SideBar></SideBar>
+      <Router>
+        <SideBar></SideBar>
+      </Router>
 
       {/* <OutsideContainer>
       <Scroll.Element name = "Image">
