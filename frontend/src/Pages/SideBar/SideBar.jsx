@@ -1,5 +1,5 @@
 import React from "react";
-import {StyledProSideBar, StyledMenu, StyledMenuItem, StyledSubMenu, StyledSidebarHeader, StyledSidebarContent, MenuDiv, Line, MenuItemDiv} from "./styled-components";
+import {StyledProSideBar, StyledMenu, StyledMenuItem, StyledSubMenu, StyledSidebarHeader, StyledSidebarContent, MenuDiv, Line, MenuItemDiv, StyledLink} from "./styled-components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from '../About/About';
 import Contact from "../Contact/Contact";
@@ -14,19 +14,23 @@ function ToolBar() {
           <StyledSidebarContent marginLeft={25}> NGUYEN </StyledSidebarContent>
         </StyledSidebarHeader>
         <StyledMenu>
-          <StyledSubMenu title="PORTFOLIO" open="true">
-            <Link to='/Portfolio'/>
+        <StyledLink to='/Portfolio'>
+          <StyledSubMenu title="PORTFOLIO" open="true"/>
+          </StyledLink>
             <MenuDiv>
             <Line/>
             <MenuItemDiv>
-            <StyledMenuItem>FAMILY <Link to='/Family'/></StyledMenuItem>
-            <StyledMenuItem>ENGAGEMENT <Link to='/Engagement'/></StyledMenuItem>
-            <StyledMenuItem>PORTRAIT <Link to='/Portrait'/></StyledMenuItem>
+            <StyledLink to='/Family'><StyledMenuItem>FAMILY</StyledMenuItem></StyledLink>
+            <StyledLink to='/Engagement'><StyledMenuItem>ENGAGEMENT</StyledMenuItem></StyledLink>
+            <StyledLink to='/Portrait'><StyledMenuItem>PORTRAIT</StyledMenuItem></StyledLink>
             </MenuItemDiv>
             </MenuDiv>
-          </StyledSubMenu>
-          <StyledSubMenu title="ABOUT ME" open="true"> <Link to='/About'/></StyledSubMenu>
-          <StyledSubMenu title="CONTACT"open="true"> <Link to='/Contact'/></StyledSubMenu>
+          <StyledLink to='/About'>
+          <StyledSubMenu title="ABOUT ME" open="true"/>
+          </StyledLink>
+          <StyledLink to='/Contact'>
+          <StyledSubMenu title="CONTACT"open="true"/>
+          </StyledLink>
         </StyledMenu>
       </StyledProSideBar>
   );

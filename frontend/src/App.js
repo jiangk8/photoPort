@@ -7,7 +7,7 @@ import Contact from "./Pages/Contact/Contact.jsx";
 import Work from "./Pages/Work";
 import "animate.css/animate.min.css";
 import * as Scroll from "react-scroll";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const OutsideContainer = styled.div``;
 
@@ -16,6 +16,10 @@ function App() {
     <>
       <Router>
         <SideBar></SideBar>
+        <Routes>
+          <Route exact path="/About" element={<About />}></Route>
+          <Route exact path="/Contact" element={<Contact />}></Route>
+        </Routes>
       </Router>
 
       {/* <OutsideContainer>

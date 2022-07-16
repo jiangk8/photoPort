@@ -17,6 +17,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-carousel-minimal": "^1.4.1",
     "react-dom": "^16.14.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.4",
     "react-useinterval": "^1.0.2",

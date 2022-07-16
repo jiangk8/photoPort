@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarContent } from "react-pro-sidebar";
+import { Link } from "react-router-dom";
 
 
 export const StyledProSideBar = styled(ProSidebar)`
@@ -28,20 +29,20 @@ letter-spacing: 3px;
 font-size: 18px;;
 letter-spacing: 1.4px;
 line-height: 1.8em;
+
 `
 
 export const StyledSubMenu = styled(SubMenu)`
 list-style-type: none;
-& .pro-inner-item {
-    &:hover {
-        color: #A9A9A9;
-    }
+&:hover {
+    color: #A9A9A9;
 }
 `
 
 export const StyledMenuItem = styled(MenuItem)`
 list-style-type: none;
 font-size: 16px;
+margin-left: 20px;
 &:hover {
     color: #A9A9A9;
 }
@@ -50,17 +51,21 @@ font-size: 16px;
 export const MenuDiv = styled.div`
 display: flex;
 flex-direction: row;
-margin-left: -40px;
 `
 
 export const Line = styled.div`
 background-color: grey;
 width: 1px;
 height: 100px;
+margin-top: 2px;
 `
 
 export const MenuItemDiv = styled.div`
-margin-left: 20px;
+`
+
+export const StyledLink = styled(Link)`
+color: #000;
+text-decoration: none;
 `
 
 /*
