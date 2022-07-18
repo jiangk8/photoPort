@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 
 export const StyledProSideBar = styled(ProSidebar)`
   width: auto;
-  position: fixed;
   font-family: Crimson Text;
   line-height: 1.4em;
   color: #000;
@@ -39,8 +38,11 @@ export const StyledMenu = styled(Menu)`
 
 export const StyledSubMenu = styled(SubMenu)`
   list-style-type: none;
-  &:hover {
-    color: #a9a9a9;
+  .pro-item-content {
+    &:hover {
+      color: #a9a9a9;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -48,8 +50,11 @@ export const StyledMenuItem = styled(MenuItem)`
   list-style-type: none;
   font-size: 16px;
   margin-left: 20px;
-  &:hover {
-    color: #a9a9a9;
+  .pro-item-content {
+    &:hover {
+      color: #a9a9a9;
+      cursor: pointer;
+    }
   }
 `;
 export const MenuDiv = styled.div`
@@ -65,11 +70,6 @@ export const Line = styled.div`
 `;
 
 export const MenuItemDiv = styled.div``;
-
-export const StyledLink = styled(Link)`
-  color: #000;
-  text-decoration: none;
-`;
 
 /*
         <Route exact path='/About' element={< About />}></Route>

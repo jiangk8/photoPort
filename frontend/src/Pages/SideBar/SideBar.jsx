@@ -9,13 +9,11 @@ import {
   MenuDiv,
   Line,
   MenuItemDiv,
-  StyledLink,
 } from "./styled-components";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import About from "../About/About";
-import Contact from "../Contact/Contact";
+import { useNavigate } from "react-router-dom";
 
-function ToolBar() {
+function SideBar() {
+  const navigate = useNavigate();
   return (
     <StyledProSideBar>
       <StyledSidebarHeader>
@@ -23,32 +21,38 @@ function ToolBar() {
         <StyledSidebarContent marginLeft={25}> NGUYEN </StyledSidebarContent>
       </StyledSidebarHeader>
       <StyledMenu>
-        <StyledLink to='/Portfolio'>
-          <StyledSubMenu title='PORTFOLIO' open='true' />
-        </StyledLink>
+        <StyledSubMenu
+          title='PORTFOLIO'
+          open='true'
+          onClick={() => navigate("/portfolio")}
+        />
         <MenuDiv>
           <Line />
           <MenuItemDiv>
-            <StyledLink to='/Family'>
-              <StyledMenuItem>FAMILY</StyledMenuItem>
-            </StyledLink>
-            <StyledLink to='/Engagement'>
-              <StyledMenuItem>ENGAGEMENT</StyledMenuItem>
-            </StyledLink>
-            <StyledLink to='/Portrait'>
-              <StyledMenuItem>PORTRAIT</StyledMenuItem>
-            </StyledLink>
+            <StyledMenuItem onClick={() => navigate("/family")}>
+              FAMILY
+            </StyledMenuItem>
+            <StyledMenuItem onClick={() => navigate("/engagement")}>
+              ENGAGEMENT
+            </StyledMenuItem>
+            <StyledMenuItem onClick={() => navigate("/portrait")}>
+              PORTRAIT
+            </StyledMenuItem>
           </MenuItemDiv>
         </MenuDiv>
-        <StyledLink to='/About'>
-          <StyledSubMenu title='ABOUT ME' open='true' />
-        </StyledLink>
-        <StyledLink to='/Contact'>
-          <StyledSubMenu title='CONTACT' open='true' />
-        </StyledLink>
+        <StyledSubMenu
+          title='ABOUT ME'
+          open='true'
+          onClick={() => navigate("/about")}
+        />
+        <StyledSubMenu
+          title='CONTACT'
+          open='true'
+          onClick={() => navigate("/contact")}
+        />
       </StyledMenu>
     </StyledProSideBar>
   );
 }
 
-export default ToolBar;
+export default SideBar;
