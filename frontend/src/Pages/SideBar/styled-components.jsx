@@ -1,72 +1,75 @@
-import styled from 'styled-components';
-
-import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarContent } from "react-pro-sidebar";
+import styled from "styled-components";
+import {
+  ProSidebar,
+  Menu,
+  MenuItem,
+  SubMenu,
+  SidebarHeader,
+  SidebarContent,
+} from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 
-
 export const StyledProSideBar = styled(ProSidebar)`
-width: auto;
-position: fixed;
-font-family: Crimson Text;
-line-height: 1.4em;
-color: #000;
-padding: 65px 0px 65px;
-`
+  width: auto;
+  position: fixed;
+  font-family: Crimson Text;
+  line-height: 1.4em;
+  color: #000;
+  padding: 65px 0px 65px;
+  height: 100%;
+`;
 
 export const StyledSidebarHeader = styled(SidebarHeader)`
-line-height: 40px;
-margin: 0px 40px 25px;
-`
+  line-height: 40px;
+  margin: 0px 40px 25px;
+`;
 
 export const StyledSidebarContent = styled(SidebarContent)`
-font-size: 1.7em;
-letter-spacing: 4px;
-margin-left:${(props) =>props.marginLeft ?? 0}px;
-`
+  font-size: 1.7em;
+  letter-spacing: 4px;
+  margin-left: ${(props) => props.marginLeft ?? 0}px;
+`;
 
 export const StyledMenu = styled(Menu)`
-letter-spacing: 3px;
-font-size: 18px;;
-letter-spacing: 1.4px;
-line-height: 1.8em;
-
-`
+  letter-spacing: 3px;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+  line-height: 1.8em;
+`;
 
 export const StyledSubMenu = styled(SubMenu)`
-list-style-type: none;
-&:hover {
-    color: #A9A9A9;
-}
-`
+  list-style-type: none;
+  &:hover {
+    color: #a9a9a9;
+  }
+`;
 
 export const StyledMenuItem = styled(MenuItem)`
-list-style-type: none;
-font-size: 16px;
-margin-left: 20px;
-&:hover {
-    color: #A9A9A9;
-}
-
-`
+  list-style-type: none;
+  font-size: 16px;
+  margin-left: 20px;
+  &:hover {
+    color: #a9a9a9;
+  }
+`;
 export const MenuDiv = styled.div`
-display: flex;
-flex-direction: row;
-`
+  display: flex;
+  flex-direction: row;
+`;
 
 export const Line = styled.div`
-background-color: grey;
-width: 1px;
-height: 100px;
-margin-top: 2px;
-`
+  background-color: grey;
+  width: 1px;
+  height: 100px;
+  margin-top: 2px;
+`;
 
-export const MenuItemDiv = styled.div`
-`
+export const MenuItemDiv = styled.div``;
 
 export const StyledLink = styled(Link)`
-color: #000;
-text-decoration: none;
-`
+  color: #000;
+  text-decoration: none;
+`;
 
 /*
         <Route exact path='/About' element={< About />}></Route>
