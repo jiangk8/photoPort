@@ -7,10 +7,10 @@ import {
   SidebarHeader,
   SidebarContent,
 } from "react-pro-sidebar";
-import { Link } from "react-router-dom";
 
 export const StyledProSideBar = styled(ProSidebar)`
-  width: auto;
+  width: 240px;
+  position: fixed;
   font-family: Crimson Text;
   line-height: 1.4em;
   color: #000;
