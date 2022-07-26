@@ -9,13 +9,14 @@ import {
 } from "react-pro-sidebar";
 
 export const StyledProSideBar = styled(ProSidebar)`
-  width: 240px;
+  width: 260px;
   position: fixed;
   font-family: Crimson Text;
   line-height: 1.4em;
   color: #000;
   padding: 65px 0px 65px;
   height: 100%;
+  background-color: pink;
 `;
 
 export const StyledSidebarHeader = styled(SidebarHeader)`

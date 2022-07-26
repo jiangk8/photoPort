@@ -10,6 +10,7 @@ import {
   StyledInput,
   Container,
 } from "./styled-components";
+import flower from "../../Images/bwFlower.jpg";
 import "animate.css/animate.min.css";
 import { handleSubmit } from "../../api";
 
@@ -79,7 +80,9 @@ function Contact() {
           </MessageHalf>
         </Form>
       </ContactForm>
-      <ContactForm></ContactForm>
+      <ContactForm>
+        <img src={flower} alt='' />
+      </ContactForm>
     </Container>
   );
 }

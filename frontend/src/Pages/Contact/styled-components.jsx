@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-left: 240px;
+  margin-left: 300px;
 `;
 
 export const ContactForm = styled.div`
@@ -13,7 +13,7 @@ export const ContactForm = styled.div`
   height: auto;
   justify-content: center;
   width: 50%;
-  padding: 65px 120px 65px;
+  padding: 65px 70px 65px 90px;
 `;
 
 export const ContactTitle = styled.h1`
