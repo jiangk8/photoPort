@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
@@ -10,12 +10,13 @@ import Portrait from "./Pages/Portrait/Portrait";
 const Router = () => {
   return (
     <Routes>
-      <Route path='/portfolio' element={<Portfolio />}></Route>
-      <Route path='/family' element={<Family />}></Route>
-      <Route path='/engagement' element={<Engagement />}></Route>
-      <Route path='/portrait' element={<Portrait />}></Route>
-      <Route path='/about' element={<About />}></Route>
-      <Route path='/contact' element={<Contact />}></Route>
+      <Route path='/' element={<Navigate to='/portfolio' replace />} />
+      <Route path='portfolio' element={<Portfolio />} />
+      <Route path='family' element={<Family />} />
+      <Route path='engagement' element={<Engagement />} />
+      <Route path='portrait' element={<Portrait />} />
+      <Route path='about' element={<About />} />
+      <Route path='contact' element={<Contact />} />
     </Routes>
   );
 };

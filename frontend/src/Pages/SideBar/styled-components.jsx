@@ -16,7 +16,6 @@ export const StyledProSideBar = styled(ProSidebar)`
   color: #000;
   padding: 65px 0px 65px;
   height: 100%;
-  background-color: pink;
 `;
 
 export const StyledSidebarHeader = styled(SidebarHeader)`

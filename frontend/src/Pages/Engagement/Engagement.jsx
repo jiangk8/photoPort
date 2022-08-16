@@ -1,39 +1,13 @@
 import React from "react";
-import {
-  Container,
-  Margin,
-  BlockOne,
-  BlockTwo,
-  ImageOne,
-  ImageTwo,
-} from "./styled-components";
+import { Container } from "./styled-components";
 import tempImg from "../../Images/Selfy.jpg";
+import Gallery from "../Gallery/Gallery";
 
 function Engagement() {
   return (
     <Container>
-      <BlockTwo>
-        <Margin>
-          <ImageTwo src={tempImg} />
-        </Margin>
-        <Margin>
-          <ImageTwo src={tempImg} />
-        </Margin>
-        <Margin marginRight={0}>
-          <ImageTwo src={tempImg} />
-        </Margin>
-      </BlockTwo>
-      <BlockTwo>
-        <Margin>
-          <ImageTwo src={tempImg} />
-        </Margin>
-        <Margin>
-          <ImageTwo src={tempImg} />
-        </Margin>
-        <Margin marginRight={0}>
-          <ImageTwo src={tempImg} />
-        </Margin>
-      </BlockTwo>
+      <Gallery img1={tempImg} />
+      <Gallery img1={tempImg} img2={tempImg} img3={tempImg} />
     </Container>
   );
 }
