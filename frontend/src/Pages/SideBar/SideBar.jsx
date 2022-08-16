@@ -32,8 +32,8 @@ function SideBar() {
             <StyledMenuItem onClick={() => navigate("/family")}>
               FAMILY
             </StyledMenuItem>
-            <StyledMenuItem onClick={() => navigate("/engagement")}>
-              ENGAGEMENT
+            <StyledMenuItem onClick={() => navigate("/couple")}>
+              COUPLE
             </StyledMenuItem>
             <StyledMenuItem onClick={() => navigate("/portrait")}>
               PORTRAIT
