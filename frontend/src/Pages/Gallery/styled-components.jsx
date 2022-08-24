@@ -6,6 +6,7 @@ export const Row = styled.div`
   width: auto;
   overflow: hidden;
   margin-bottom: 2px;
+  justify-content: space-evenly;
 `;
 
 export const Block = styled.div`

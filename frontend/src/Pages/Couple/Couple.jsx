@@ -24,12 +24,11 @@ function Couple() {
       <Gallery img1={images[21]} img2={images[20]} />
       <Gallery img1={images[0]} />
       <Gallery img1={images[26]} img2={images[4]} />
-      <Gallery img1={images[19]} img2={images[12]} />
+      <Gallery img1={images[13]} img2={images[11]} />
       <Gallery img1={images[10]} img2={images[9]} />
       <Gallery img1={images[3]} />
-      <Gallery img1={images[13]} img2={images[11]} />
       <Gallery img1={images[8]} img2={images[15]} />
-      <Gallery img1={images[14]} img2={images[7]} />
+      <Gallery img1={images[14]} img2={images[19]} />
       <Gallery img1={images[6]} img2={images[5]} />
       <Gallery img1={images[27]} img2={images[24]} img3={images[23]} />
     </Container>
