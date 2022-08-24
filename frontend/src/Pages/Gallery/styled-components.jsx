@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Block = styled.div`
+export const Row = styled.div`
   display: flex;
   height: auto;
   width: auto;
@@ -8,7 +8,7 @@ export const Block = styled.div`
   margin-bottom: 2px;
 `;
 
-export const Margin = styled.div`
+export const Block = styled.div`
   margin-right: 6px;
 `;
 

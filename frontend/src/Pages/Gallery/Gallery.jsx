@@ -1,19 +1,19 @@
 import React from "react";
-import { Block, Margin, Image } from "./styled-components";
+import { Row, Block, Image } from "./styled-components";
 
 function Gallery(props) {
   return (
-    <Block>
-      <Margin>
+    <Row>
+      <Block>
         <Image src={props.img1} />
-      </Margin>
-      <Margin>
+      </Block>
+      <Block>
         <Image src={props.img2} />
-      </Margin>
-      <Margin>
+      </Block>
+      <Block>
         <Image src={props.img3} />
-      </Margin>
-    </Block>
+      </Block>
+    </Row>
   );
 }
 

@@ -18,7 +18,7 @@ function SideBar() {
     <StyledProSideBar>
       <StyledSidebarHeader>
         <StyledSidebarContent> ARLETTE </StyledSidebarContent>
-        <StyledSidebarContent marginLeft={25}> NGUYEN </StyledSidebarContent>
+        <StyledSidebarContent marginleft={25}> NGUYEN </StyledSidebarContent>
       </StyledSidebarHeader>
       <StyledMenu>
         <StyledSubMenu

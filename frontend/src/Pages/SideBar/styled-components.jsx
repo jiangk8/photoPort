@@ -26,7 +26,7 @@ export const StyledSidebarHeader = styled(SidebarHeader)`
 export const StyledSidebarContent = styled(SidebarContent)`
   font-size: 1.7em;
   letter-spacing: 4px;
-  margin-left: ${(props) => props.marginLeft ?? 0}px;
+  margin-left: ${(props) => props.marginleft ?? 0}px;
 `;
 
 export const StyledMenu = styled(Menu)`

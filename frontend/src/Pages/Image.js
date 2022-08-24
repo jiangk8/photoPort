@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
-import { Carousel } from 'react-carousel-minimal';
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
+import { Carousel } from "react-carousel-minimal";
 
 //transform: translateX(100%);
 
@@ -47,9 +47,9 @@ function Image() {
     let i = [];
     r.keys().map((item) =>
       i.push({
-        image: require('../Images/MainScroll/' + item.replace('./', ''))
+        image: require("../Images/MainScroll/" + item.replace("./", ""))
           .default,
-        caption: 'photo',
+        caption: "photo",
       })
     );
     //console.log("hello world")
@@ -69,7 +69,7 @@ function Image() {
   //console.log(images)
 
   images = importAll(
-    require.context('../Images/MainScroll', false, /\.(png|jpe?g|svg)$/)
+    require.context("../Images/MainScroll", false, /\.(png|jpe?g|svg)$/)
   );
   // console.log(images)
 
