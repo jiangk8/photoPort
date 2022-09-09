@@ -7,12 +7,16 @@ function Gallery(props) {
       <Block>
         <Image src={props.img1} />
       </Block>
-      <Block>
-        <Image src={props.img2} />
-      </Block>
-      <Block>
-        <Image src={props.img3} />
-      </Block>
+      {props.img2 && (
+        <Block>
+          <Image src={props.img2} />
+        </Block>
+      )}
+      {props.img3 && (
+        <Block>
+          <Image src={props.img3} />
+        </Block>
+      )}
     </Row>
   );
 }
