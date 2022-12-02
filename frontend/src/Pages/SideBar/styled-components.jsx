@@ -9,13 +9,14 @@ import {
 } from "react-pro-sidebar";
 
 export const StyledProSideBar = styled(ProSidebar)`
-  width: 260px;
+  width: 270px;
   position: fixed;
   font-family: Crimson Text;
   line-height: 1.4em;
   color: #000;
   padding: 65px 0px 65px;
   height: 100%;
+  background-color: #d6cadd;
 `;
 
 export const StyledSidebarHeader = styled(SidebarHeader)`
@@ -34,6 +35,7 @@ export const StyledMenu = styled(Menu)`
   font-size: 18px;
   letter-spacing: 1.4px;
   line-height: 1.8em;
+  margin-left: 30px;
 `;
 
 export const StyledSubMenu = styled(SubMenu)`
@@ -70,12 +72,3 @@ export const Line = styled.div`
 `;
 
 export const MenuItemDiv = styled.div``;
-
-/*
-        <Route exact path='/About' element={< About />}></Route>
-        <Route exact path='/Contact' element={< Contact />}></Route>
-        <Route exact path='/Portfolio' element={< Portfolio/>}></Route>
-        <Route exact path='/Family' element={< Family />}></Route>
-        <Route exact path='/Engagement' element={< Engagement />}></Route>
-        <Route exact path='/Portrait' element={< Portrait />}></Route>
-        */

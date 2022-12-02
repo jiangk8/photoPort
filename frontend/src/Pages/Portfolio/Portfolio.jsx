@@ -1,14 +1,30 @@
 import React from "react";
-import { Container } from "./styled-components";
-import Gallery from "../Gallery/Gallery";
-import tempImg from "../../Images/Selfy.jpg";
+import { Container, Row, Image, Title, StyledLink } from "./styled-components";
+import famImg from "../../Images/Family/05.jpg";
+import coupleImg from "../../Images/Couple/25.jpg";
+import portImg from "../../Images/Family/02.jpg";
 
 function Portfolio() {
   return (
     <Container>
-      <Gallery img1={tempImg} img2={tempImg} />
-      <Gallery img1={tempImg} img2={tempImg} img3={tempImg} />
-      <Gallery img1={tempImg} img2={tempImg} img3={tempImg} />
+      <Row>
+        <Image src={famImg} />
+        <Title>
+          <StyledLink to='/family'>FAMILY</StyledLink>
+        </Title>
+      </Row>
+      <Row>
+        <Title>
+          <StyledLink to='/couple'>COUPLE</StyledLink>
+        </Title>
+        <Image src={coupleImg} />
+      </Row>
+      <Row>
+        <Image src={portImg} />
+        <Title>
+          <StyledLink to='/portrait'>PORTRAIT</StyledLink>
+        </Title>
+      </Row>
     </Container>
   );
 }
